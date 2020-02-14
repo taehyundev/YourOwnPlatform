@@ -1,0 +1,20 @@
+.js-clock{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+.form
+{
+    display: none;
+    text-align: center;
+}
+.greetings{
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.showing{
+    display : block;
+}
