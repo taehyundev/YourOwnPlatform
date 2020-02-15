@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <meta charset="utf-8"/>
     <link rel= "stylesheet" href="CSS/style.css">
     <link rel= "stylesheet" href="css/index.css">
     <title>Hello</title>
 </head>
 <body>
+    
+    <span class = "js-weather weather"></span>
     <div class="js-clock">
         <h1>00:00</h1>
     </div>
@@ -13,7 +16,16 @@
         <input type="text" placeholder="What is your name?" />
     </form>
     <h4 class = "js-greetings greetings"></h4>
+    <form class ="js-toDoForm">
+        <input type ="text" placeholder="Today Work's"/>
+
+    </form>
+    <ul class="js-toDoList">
+        
+    </ul>
     <script src="js/clock.js"></script>
     <script src="js/gretting.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>

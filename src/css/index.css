@@ -8,13 +8,60 @@
     display: none;
     text-align: center;
 }
-.greetings{
-    display: none;
+.greetings
+{   display: none;
     text-align: center;
     font-size: 20px;
     color: white;
 }
-
-.showing{
+.toDoForm,
+.toDoList{
+    display: none;
+}
+.showing
+{
     display : block;
 }
+.js-toDoForm{
+    text-align: center;
+}
+.js-toDoList{
+    display: table;
+    color : white;
+    font-size: 10px;
+}
+ul{
+    list-style:none;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.weather{
+    text-align: right;
+    position: absolute;
+    color: white;
+}
+li{
+    padding-top: 7px;
+    margin-left: 10px;
+}
+li button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+
+}
+
+li button:hover {
+    background-color: rgb(57, 165, 84);
+    box-shadow: 0px 15px 20px darkgreen;
+    color: #fff;
+  }
