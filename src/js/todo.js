@@ -2,7 +2,8 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     toDoInput = toDoForm.querySelector("input"),
     toDoList = document.querySelector(".js-toDoList");
 
-const TODOS_LS = 'toDos';
+const TODOS_LS = 'toDos'
+    ,CHECK_LS = 'checked';
 
 let toDos = [];
 
@@ -18,25 +19,42 @@ function deletetoDo(event){
     saveToDos();
 }
 
+
 function saveToDos(){
     localStorage.setItem(TODOS_LS,JSON.stringify(toDos))
 }
 
 function paintToDo(text){
     const li = document.createElement("li");
-    const delBtn = document.createElement("button");
+    const checkBtn = document.createElement("input");
+    const delBtn = document.createElement("img");
+    checkBtn.setAttribute("type", "checkbox");
+    delBtn.setAttribute("src", "image/Btn/delBtn.png");
+    delBtn.setAttribute("width", 15);
+    delBtn.setAttribute("height", 15);
+    checkBtn.value =1;
     const span  = document.createElement("span");
     const newId = toDos.length +1;
+    delBtn.classList = "delBtn";
     delBtn.addEventListener("click", deletetoDo);
-    delBtn.innerHTML = "clear";
-    span.innerText = text;
-    li.appendChild(delBtn);
-    li.appendChild(span);
+    checkBtn.addEventListener("change", e =>{
+        if(checkBtn.checked){  
+            alert("test");
+        }
+        
+    });
+    
+    span.classList.add("strikethrough");
+    span.innerText ="  "+ text+ "   ";
     li.id = newId;
+    li.appendChild(checkBtn);
+    li.appendChild(span);
+    li.appendChild(delBtn);
     toDoList.appendChild(li);
     const toDoObj = {
         text: text,
-        id : newId
+        id : newId,
+        checked : null
     };
     toDos.push(toDoObj);
     saveToDos()

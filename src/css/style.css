@@ -1,9 +1,21 @@
 
 body{
-    background-image: url('../image/background_1.jpg');
-    background-size: cover;
-    background-position: center center;
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
+    background-color: dodgerblue;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.bgImage{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
 }

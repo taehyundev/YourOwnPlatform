@@ -4,28 +4,38 @@
     <meta charset="utf-8"/>
     <link rel= "stylesheet" href="CSS/style.css">
     <link rel= "stylesheet" href="css/index.css">
-    <title>Hello</title>
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+
+  <title>Hello</title>
 </head>
 <body>
-    
+    <!--날씨-->
     <span class = "js-weather weather"></span>
-    <div class="js-clock">
-        <h1>00:00</h1>
-    </div>
-    <form class ="js-form form">
-        <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class = "js-greetings greetings"></h4>
-    <form class ="js-toDoForm">
-        <input type ="text" placeholder="Today Work's"/>
 
-    </form>
-    <ul class="js-toDoList">
+    <div class= "center-position">    
+        <div class="js-clock">
+            <h3></h3><h1></h1>
+            </div>
         
-    </ul>
+        <form class ="js-form form">
+            <input class="input-text" type="text" placeholder="What is your name?"  />
+        </form>
+
+        <h4 class = "js-greetings greetings"></h4>
+
+        <form class ="js-toDoForm">
+            <input class="input-text" type ="text" placeholder="What to do today ~"/>
+        </form>
+        <!--List-->
+        <div class="checkbox">   
+            <ul class="js-toDoList"></ul>
+        </div>
+    </div>    
+    <!--Script-->
     <script src="js/clock.js"></script>
     <script src="js/gretting.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/bg.js"></script>
     <script src="js/weather.js"></script>
 </body>
 </html>

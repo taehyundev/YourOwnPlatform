@@ -13,7 +13,7 @@ function getWeather(lat, lng){
         const temper = json.main.temp;
         const mainw = json.weather;
         const mweather =mainw[0].main;
-        weather.innerText = `Temperature : ${temper} \n Weather : ${mweather}`;
+        weather.innerText = `Temperature : ${temper} °C\n Weather : ${mweather}`;
     })
 }
 

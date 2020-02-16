@@ -2,6 +2,8 @@
     color: white;
     text-align: center;
     font-size: 30px;
+    text-shadow: black 1px 2px 2px;
+    font-weight: lighter;
 }
 .form
 {
@@ -13,6 +15,8 @@
     text-align: center;
     font-size: 20px;
     color: white;
+    text-shadow: black 1px 2px 2px;
+    font-family: 'Arvo', serif;
 }
 .toDoForm,
 .toDoList{
@@ -36,32 +40,61 @@ ul{
   margin-left: auto;
   margin-right: auto;
 }
+.listbox_name{
+    list-style: square;
+    color: white;
+  margin-right: 20px;
+}
 .weather{
     text-align: right;
     position: absolute;
     color: white;
+    text-shadow: black 1px 2px 2px;
 }
 li{
-    padding-top: 7px;
-    margin-left: 10px;
+    padding-top: 7px
 }
-li button{
-    font-family: 'Roboto', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-
-}
-
-li button:hover {
-    background-color: rgb(57, 165, 84);
-    box-shadow: 0px 15px 20px darkgreen;
-    color: #fff;
+.input-text {
+    width: 300px;
+    background-image: linear-gradient(to right, #000, #000);
+    background-position: 5px calc(100% - 5px);
+    background-size: calc(100% - 10px) 2px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0px solid;
+    padding: 10px;
+    color: white;
   }
+  input::placeholder{
+      color :white;
+  }
+  .strikethrough{
+        
+    font-size: 15px;
+  }
+  input[type=checkbox]:checked + span.strikethrough{
+    text-decoration: line-through;
+  }
+
+  .delBtn{
+    
+    border-radius: 50%;
+    border: 0px solid;
+    opacity: 0.2;
+}
+.delBtn:hover{
+    opacity: 1;
+}
+h3,h1{
+    display:inline;
+}
+
+h3{
+    font-size: 25px;
+}
+.center-position{
+    
+    position: absolute;
+    left: 35%;
+    top : 30%
+}
