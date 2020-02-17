@@ -26,9 +26,6 @@
 {
     display : block;
 }
-.js-toDoForm{
-    text-align: center;
-}
 .js-toDoList{
     display: table;
     color : white;
@@ -69,7 +66,7 @@ li{
       color :white;
   }
   .strikethrough{
-        
+    text-decoration: line-through;
     font-size: 15px;
   }
   input[type=checkbox]:checked + span.strikethrough{
@@ -96,5 +93,46 @@ h3{
     
     position: absolute;
     left: 35%;
-    top : 30%
+    top : 25%
+}
+.look{
+    display: none;
+}
+
+.checkbox{
+    background-color: rgb(80, 79, 79);
+    opacity: 0.8;
+    width: 180px;
+    height: 180px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    visibility: hidden;
+    border-radius: 0px 0px 0px 20px;
+    font-size: 13px;
+}
+
+.checkbox_look{
+    visibility: visible;
+}
+.title{
+    background-color: rgb(26, 24, 24);
+    width: 180px;
+    height: 30px;
+    opacity: 0.9;
+    color: white;
+    text-align: center;
+    font-size: 8px;
+    line-height:30px;
+    border-radius: 20px 0px 0px 0px;
+}
+.title:hover{
+    background-color: black;
+    opacity: 0.9;
+
+}
+.list{
+    
+    position: absolute;
+    top:-80px;
+    left:400px;
 }

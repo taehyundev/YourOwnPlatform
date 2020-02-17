@@ -11,12 +11,18 @@ function saveName(text){
     localStorage.setItem(USER_LS,text)
 }
 
+function refresh(){
+    location.reload(true);
+    location.href = location.href;
+    history.go(0);
+}
+
 function handleSubmit(event){
     event.preventDefault();
     const currentValue= input.value;
     paintGreeting(currentValue);
     saveName(currentValue);
-    
+    refresh();
 }
 
 
@@ -34,10 +40,9 @@ function paintGreeting(text){
 
 function loadName(){
     const currentUser = localStorage.getItem(USER_LS);
-    if(currentUser === null){
+    if(currentUser === null || currentUser === ""){
         askForname();
     }else{
-        
         paintGreeting(currentUser);
     }
 }
