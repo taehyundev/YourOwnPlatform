@@ -10,8 +10,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     
     var sw =1;
 
-const TODOS_LS = 'toDos'
-    ,CHECK_LS = 'checked';
+var TODOS_LS = 'toDos';
 
     let toDos = [];
     let ccheck= [];
@@ -29,9 +28,25 @@ function deletetoDo(event){
     saveToDos();
 }
 
+function spanSet(event){
+    const chec = event.target;
+    const li = chec.parentNode;
+    const cleanToDos = toDos.filter(function (toDo){
+        if(toDo.id ===parseInt(li.id)){
+            if(toDo.text.includes('[clear]') === false){
+            toDo.text = `[clear]  ${toDo.text}`;
+            }
+        }
+        return toDo.id
+    })
+    toDos = cleanToDos;
+
+    saveToDos();
+    location.reload();
+}
 
 function saveToDos(){
-    localStorage.setItem(TODOS_LS,JSON.stringify(toDos))
+    localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
 }
 
 function paintToDo(text){
@@ -48,9 +63,9 @@ function paintToDo(text){
     const newId = toDos.length +1;
     delBtn.classList = "delBtn";
     delBtn.addEventListener("click", deletetoDo);
+    span.addEventListener("click",spanSet);
     span.innerText ="  "+ text+ "   ";
     li.id = newId;
-    li.appendChild(checkBtn);
     li.appendChild(span);
     li.appendChild(delBtn);
     toDoList.appendChild(li);
@@ -100,10 +115,10 @@ function titleClick(){
     }
 }
 
+
 function init(){
     
     const currentUser = localStorage.getItem("currentUser");
-    
     if(currentUser !== null &&currentUser !== ""){
     listget();
     loadToDos();
